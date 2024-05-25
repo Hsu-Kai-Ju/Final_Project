@@ -1,0 +1,95 @@
+* {
+    margin: 0px;
+}
+
+/* 版面配置 */
+.container {
+    min-height:750px;
+    width: auto;
+    display: grid;
+
+    grid-template-rows:15% 1fr 15%;
+    grid-template-columns: 15% 1fr 1fr;
+
+    grid-template-areas:
+    "header header header"
+    "sidebar main main" 
+    "footer footer footer";
+}
+
+header {
+    background-color: rgb(215, 234, 246);
+    grid-area: header;
+}
+
+aside {
+    background-color: rgba(242, 247, 250, 0.942);
+    grid-area: sidebar;
+}
+
+main {
+    background-color: #fff;
+    grid-area: main;
+    
+}
+
+footer {
+    background-color:rgb(107, 119, 147);
+    grid-area: footer;
+}
+
+/* HEADER */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 30px; 
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+    text-align: center;
+    font-size: 120%;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.right {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* ASIDE */
+aside {
+    padding: 20px;
+    line-height: 140%;
+}
+
+aside p {
+    margin-top: 10%;
+}
+
+aside a {
+    color: inherit;
+    text-decoration: none;
+}
+
+aside dt:hover {
+    background-color: rgb(211, 211, 211);
+}
+
+/*main*/
+
+/*footer*/
+footer p {
+    text-align: center;
+    padding: 5%;
+}
