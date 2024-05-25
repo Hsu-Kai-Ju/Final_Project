@@ -44,7 +44,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    padding: 30px; 
+    padding: 40px; 
 }
 
 nav a {
@@ -64,7 +64,7 @@ nav a {
     flex: 3;
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 20px;
 }
 
 /* ASIDE */
@@ -72,9 +72,15 @@ aside {
     padding: 20px;
     line-height: 140%;
 }
+.side {
+    margin-left: 20px;
+}
 
 aside p {
-    margin-top: 10%;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    border-left: solid ;
+    padding-left: 10px;
 }
 
 aside a {
@@ -84,6 +90,11 @@ aside a {
 
 aside dt:hover {
     background-color: rgb(211, 211, 211);
+}
+
+aside img {
+    height: 10%;
+    width: 10%;
 }
 
 /*main*/
