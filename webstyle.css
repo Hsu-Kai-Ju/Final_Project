@@ -5,11 +5,11 @@
 /* 版面配置 */
 .container {
     min-height:750px;
-    width: auto;
+    width: auto ;
     display: grid;
 
     grid-template-rows:15% 1fr 15%;
-    grid-template-columns: 15% 1fr 1fr;
+    grid-template-columns: 18% 1fr 1fr;
 
     grid-template-areas:
     "header header header"
@@ -44,7 +44,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    padding: 40px; 
+    padding: 40px;
 }
 
 nav a {
@@ -58,6 +58,7 @@ nav a {
     flex: 1;
     display: flex;
     justify-content: flex-start;
+    padding-left: 5%; 
 }
 
 .right {
@@ -65,12 +66,14 @@ nav a {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
+    padding-right: 5%;
 }
 
 /* ASIDE */
 aside {
     padding: 20px;
-    line-height: 140%;
+    padding-left: 10%; 
+    line-height: 150%;
 }
 .side {
     margin-left: 20px;
