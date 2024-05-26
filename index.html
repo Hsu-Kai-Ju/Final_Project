@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>記・敘</title>
     <link rel="stylesheet" href="webstyle.css">
+    <script type="text/javascript" src="Carousel.js"></script>
 </head>
 <body>
     <div class = "container">
@@ -14,9 +15,9 @@
                     <a href="index.html">記・敘</a>
                 </div>
                 <div class="right">
-                    <a href="">關於我們</a>
-                    <img style="height: 3%; width: 3%;" src="icon/user.png" alt="會員中心">
-                    <img style="height: 3%; width: 3%;" src="icon/cart.png" alt="購物車">
+                    <a href="about_us.html">關於我們</a>
+                    <a href=""><img style="height: 3%; width: 3%;" src="icon/user.png" alt="會員中心"></a>
+                    <a href=""><img style="height: 3%; width: 3%;" src="icon/cart.png" alt="購物車"></a>
                 </div>
             </nav>
         </header>
@@ -47,7 +48,31 @@
                 </dl>
             </div>
         </aside>
-        <main></main>
+        <main>
+            <!--動態廣告--->
+            <div class = "adv">
+                <div class = "slide fade">
+                    <img src="AD/sale.png" alt="">
+                </div >
+
+                <div class = "slide fade">
+                    <img src="AD/graduation.png" alt="">
+                </div>
+
+                <div class = "slide fade">
+                    <img src="AD/free.png" alt="">
+                </div>
+
+                <a class = "prev" onclick = "changeSlide(-1)">&#10094;</a>
+                <a class = "next" onclick = "changeSlide(1)">&#10095;</a>
+            </div>
+            
+            <div style="text-align: center;">
+                <span class="dot" onclick = "showSlides(1)"></span>
+                <span class="dot" onclick = "showSlides(2)"></span>
+                <span class="dot" onclick = "showSlides(3)"></span>
+            </div>
+        </main>
         <footer>
             <p>copyright@2024</p>
         </footer>
