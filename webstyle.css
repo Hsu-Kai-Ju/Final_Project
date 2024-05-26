@@ -45,7 +45,8 @@ nav {
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    padding: 40px;
+    padding: 35px;
+    margin-top: 2%;
 }
 
 nav a {
@@ -66,8 +67,8 @@ nav a {
     flex: 3;
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
-    padding-right: 5%;
+    padding-right: 5% ;
+    gap: 15px;
 }
 
 /* ASIDE */
@@ -94,11 +95,6 @@ aside a {
 
 aside dt:hover {
     background-color: rgb(211, 211, 211);
-}
-
-aside img {
-    height: 10%;
-    width: 10%;
 }
 
 /*main*/
