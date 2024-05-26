@@ -103,11 +103,11 @@ aside dt:hover {
     height: auto;
     position: relative;
     margin: 0 auto;
-    padding-top: 3%;
+    padding-top: 2%;
 }
 
 .adv img {
-    height: 350px;
+    height: 330px;
     width: 1000px;
     display: block;
     margin: 0 auto;
@@ -127,7 +127,6 @@ aside dt:hover {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    margin-top: 20px;
     border-radius: 0 3px 3px 0;
     transition: 0.6s ease;
     width: 30px;
@@ -155,7 +154,7 @@ aside dt:hover {
     cursor: pointer;
     height: 15px;
     width: 15px;
-    margin: 2% 2px 0;
+    margin: 1% 2px 0;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
