@@ -3,11 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於記·敘</title>
+    <title>ABOUT US</title>
     <link rel="stylesheet" href="webstyle.css">
+
+    <style>
+    .main {
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+    }
+
+    .item {
+        display: flex;
+        align-items: center; 
+        padding: 3%;
+    }
+
+    .item img {
+        border-radius: 15%;
+        margin-right: 10px;
+        width: 150px;
+        height: auto;
+        margin-right: 3%;
+        transition: transform 0.5s ease;
+    }
+
+    img:hover  {
+        transform: rotateY(180deg);
+    }
+
+    .hl {
+        width: 650px;
+        margin: 10px 0;
+        position: relative;
+        border: none;
+        border-top: 1px dashed ;
+    }
+    .ex {
+        border: solid;
+        border-radius: 5%;
+        width: 350px;
+        height: 150px;
+        background-image: url(image/bg.jpeg);
+        line-height: 250%;
+        padding-left: 3%;
+        transition: transform 0.5s ease;
+        font-family: 
+    }
+
+
+        
+
+    </style>
 </head>
 <body>
+    <div class = "container">
+        <header>
+            <nav>
+                <div class="left">
+                    <a href="index.html">記・敘</a>
+                </div>
+                <div class="right">
+                    <a href="about_us.html">關於我們</a>
+                    <a href="user.html"><img src="icon/user.png" alt="會員中心"></a>
+                    <a href=""><img src="icon/cart.png" alt="購物車"></a>
+                </div>
+            </nav> 
+        </header>
     
+        <main>
+            <div class="item">
+                <img style="border-radius: 15%;" src="photo/P-11043112.jpg" alt="">
+                <div class="ex">
+                    <P>許凱茹</P>
+                    <p>很有趣但很累，條間距調到發瘋</p>
+                </div>
+            </div>
+            <div class="hl"><hr style="color: rgba(242, 247, 250, 0.942);"></div>
+
+            <div class="item">
+                <img style="border-radius: 15%;" src="photo/P-11043112.jpg" alt="">
+                <div class="ex">
+                    <p>賴芷涵</p>
+                    <p>心得</p>
+                </div>
+            </div>
+
+            <div class="hl"><hr style="color: rgba(242, 247, 250, 0.942);"></div>
+
+            <div class="item">
+                <img style="border-radius: 15%;" src="photo/P-11043112.jpg" alt="">
+                <div class="ex">
+                    <p>陳洺安</p>
+                    <p>心得</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>copyright@2024</p>
+        </footer>
+    </div>
+</body>
+</html>
     
 </body>
 </html>
