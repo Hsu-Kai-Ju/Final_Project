@@ -1,0 +1,25 @@
+aside {
+    padding: 20px;
+    padding-left: 10%; 
+    line-height: 150%;
+}
+
+.side {
+    margin-left: 20px;
+}
+
+aside p {
+    margin-top: 15%;
+    margin-bottom: 5%;
+    border-left: solid ;
+    padding-left: 10px;
+}
+
+aside a {
+    color: inherit;
+    text-decoration: none;
+}
+
+aside dt:hover {
+    background-color: rgb(211, 211, 211);
+}
