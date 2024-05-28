@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LOG IN</title>
     <link rel="stylesheet" href="webstyle.css">
+   
     <style>
         
         .login {
             border: solid 1px;
             padding: 10px;
-            width: 230px;
-            height: 320px;
+            padding-top: 4%;
+            width: 350px;
+            height: 380px;
             background-color: white;
             border-radius: 5px;
             box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
             text-align: center;
-            line-height: 200%;
+            line-height: 220%;
 
             position:relative;   
             margin: auto;
@@ -26,7 +28,7 @@
         .other_login {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 20px;
             align-items: center;
         }
 
@@ -34,7 +36,7 @@
             display: flex;
             align-items: center;
             gap: 10%;
-            padding-left: 9%;
+            padding-left: 20%;
             font-size: 14px;
             color: #333;
         }
@@ -53,7 +55,7 @@
             border-radius: 10%;
             background-color: #2656C8;
             text-align: center;
-            width: 135px;
+            width: 125px;
             height: 18px;
             padding: 5px;
             margin-top: 2%;
@@ -65,7 +67,8 @@
         }
 
         h5 {
-            color: #a3a3a3;;
+            color: inherit;
+            text-decoration: none;
         }
 
         h5:hover {
@@ -119,33 +122,32 @@
         <main>
             <div class="login">
                 <h2>Log In</h2>
-                <form action="">
-                    帳號：<input type="text" name = "userName" placeholder="ID"><br>
+                <form method="post">
+                    帳號：<input type="text" name = "userID" placeholder="E-mail"><br>
                     密碼：<input type="password" name = "Password" placeholder="6~8位英數字"><br>
-                    <h4 style="margin:2%;">用其他方法登入</h4>
+                    <h4 style="margin:2%;">使用其他方法登入</h4>
                     <other_login>
                         <div class="login_option">
-                            <img src="icon/email.png" alt=""><div class="oli">使用Google登入</div>
+                            <img src="icon/email.png" alt=""><div class="oli">使用 Google 登入</div>
                         </div>
                         <div class="login_option">
-                            <img src="icon/email.png" alt=""><div class="oli">使用Facebook登入</div>
+                            <img src="icon/email.png" alt=""><div class="oli">使用 Facebook 登入</div>
                         </div>
                         <div class="login_option">
-                            <img src="icon/email.png" alt=""><div class="oli">使用AppleID登入</div>
+                            <img src="icon/email.png" alt=""><div class="oli">使用 AppleID 登入</div>
                         </div>
                     </other_login>
 
                     <input type="submit" value="登入">
                     <input type="reset" value="重填">
 
-                    <h5 onclick="show_hide()">註冊帳號</h5>
+                    <a href="sign_up.html"><h5>註冊帳號</h5></a>
                 </form>
             </div>
-            
 
             
-
             
+
         </main>
         <footer>
             <p>copyright@2024</p>
