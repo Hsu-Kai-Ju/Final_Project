@@ -5,15 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGN UP</title>
     <link rel="stylesheet" href="../assets/css/webstyle.css">
+    <link rel="stylesheet" href="../assets/css/sign_up.css">
 </head>
 <body>
-    <h2>Sign Up</h2>
-    <form method="post">
-        姓名:<input type="text" ><br>
-        電話:<input type="tel" placeholder="0900-000-000"><br>
-        E-mail:<input type="email" placeholder="example@gmail.com"><br>
-        生日:<input type="text" placeholder="YYYY/MM/DD"><br>
+    <div class = "container">
+        <header>
+            <nav>
+                <div class="left">
+                    <a href="../index.html">記・敘</a>
+                </div>
+                <div class="right">
+                    <a href="about_us.html">關於我們</a>
+                    <a href="log_in.html"><img src="../assets/image/icon/user.png" alt="會員中心"></a>
+                    <a href=""><img src="../assets/image/icon/cart.png" alt="購物車"></a>
+                </div>
+            </nav> 
+        </header>
+        <aside></aside>
+        <main>
+            <div class="signup">
+                <h2>Sign Up</h2>
+                <form method="post">
+                    姓名：<input type="text" placeholder="請輸入您的大名"><br>
+                    電話：<input type="tel" placeholder=" 0900-000-000"><br>
+                    E-mail：<input type="email" placeholder=" example@gmail.com"><br>
+                    生日：<input type="text" placeholder=" YYYY/MM/DD"><br>
+                    密碼：<input type="password" placeholder="6~8位英數字"><br>
+                    地址：<input type="text" placeholder="請輸入您的地址"><br>
+                    <input type="checkbox"> 已了解相關聲明與使用權限
 
-    </form>
+                    <a href="user.html"><div class="sb">加入會員</div></a>
+                    <div class="loi"><a href="log_in.html"><h5>現有帳號</h5></a></div>
+                </form>
+                
+            </div>
+        </main>
+    
+        <footer>
+            <div class="content">
+                <p>聯絡資訊：</p>
+                <div class="icon">
+                    <a href="mailto:cyimsa@yahoo.com.tw"><img src="../assets/image/icon/email2-.png" alt=""></a>
+                    <a href="https://www.facebook.com/cyimsa/?locale=zh_TW" target="_blank"><img src="../assets/image/icon/fb1.png" alt=""></a>
+                    <a href="tel:(03 )2655401 "><img src="../assets/image/icon/phone2.png" alt=""></a>
+                </div>
+            </div>
+            <p>copyright@2024</p>
+        </footer>
+    </div>
+
 </body>
 </html>

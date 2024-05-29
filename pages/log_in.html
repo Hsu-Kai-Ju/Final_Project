@@ -5,78 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOG IN</title>
     <link rel="stylesheet" href="../assets/css/webstyle.css">
-   
-    <style>
-        
-        .login {
-            border: solid 1px;
-            padding: 10px;
-            padding-top: 4%;
-            width: 350px;
-            height: 380px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            line-height: 220%;
-
-            position:relative;   
-            margin: auto;
-            top: 100px;
-        }
-
-        .other_login {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .login_option {
-            display: flex;
-            align-items: center;
-            gap: 10%;
-            padding-left: 20%;
-            font-size: 14px;
-            color: #333;
-        }
-
-        .login_option img {
-            width: 24px;
-            height: 24px;
-        }
-
-        .oli {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: white;
-            justify-content: center;
-            border-radius: 10%;
-            background-color: #2656C8;
-            text-align: center;
-            width: 125px;
-            height: 18px;
-            padding: 5px;
-            margin-top: 2%;
-            margin-bottom: 4%;
-        }
-
-        .oli:hover {
-            background-color: lightskyblue; 
-        }
-
-        h5 {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        h5:hover {
-            color: black;
-        }
-
-        
-    </style>
+    <link rel="stylesheet" href="../assets/css/log_in.css">
+    
 </head>
 <body>
     <div class = "container">
@@ -102,28 +32,31 @@
                     <h4 style="margin:2%;">使用其他方法登入</h4>
                     <other_login>
                         <div class="login_option">
-                            <img src="../assets/image/icon/email.png" alt=""><div class="oli">使用 Google 登入</div>
+                            <img src="../assets/image/icon/gmail3.png" alt=""><div class="oli"><a href="https://contacts.google.com" target="_blank">使用 Google 登入</a></div>
                         </div>
                         <div class="login_option">
-                            <img src="../assets/image/icon/email.png" alt=""><div class="oli">使用 Facebook 登入</div>
+                            <img src="../assets/image/icon/fb2.png" alt=""><div class="oli"><a href="https://www.facebook.com/?locale=zh_TW" target="_blank">使用 Facebook 登入</a></div>
                         </div>
                         <div class="login_option">
-                            <img src="../assets/image/icon/email.png" alt=""><div class="oli">使用 AppleID 登入</div>
+                            <img src="../assets/image/icon/apple1.png" alt=""><div class="oli"><a href="https://appleid.apple.com/sign-in" target="_blank">使用 AppleID 登入</a></div>
                         </div>
                     </other_login>
 
-                    <input type="submit" value="登入">
-                    <input type="reset" value="重填">
-
-                    <a href="sign_up.html"><h5>註冊帳號</h5></a>
+                    <a href="user.html"><div class="lb">登入</div></a>
+                    <div class="su"><a href="sign_up.html"><h5>註冊帳號</h5></a></div>
                 </form>
             </div>
-
-            
-            
-
         </main>
+
         <footer>
+            <div class="content">
+                <p>聯絡資訊：</p>
+                <div class="icon">
+                    <a href="mailto:cyimsa@yahoo.com.tw"><img src="../assets/image/icon/email2-.png" alt=""></a>
+                    <a href="https://www.facebook.com/cyimsa/?locale=zh_TW" target="_blank"><img src="../assets/image/icon/fb1.png" alt=""></a>
+                    <a href="tel:(03 )2655401 "><img src="../assets/image/icon/phone2.png" alt=""></a>
+                </div>
+            </div>
             <p>copyright@2024</p>
         </footer>
     </div>

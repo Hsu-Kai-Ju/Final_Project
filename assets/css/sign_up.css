@@ -1,0 +1,38 @@
+.signup {
+    border: solid 1px #204A40;
+    padding: 10px;
+    padding-top: 4%;
+    width: 350px;
+    height: 380px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 220%;
+
+    position:relative;   
+    margin: auto;
+    margin-bottom: 10%;
+    top: 50px;
+    left: -10%;
+
+    color: #204A40;
+}
+
+.loi a {
+    color: #204a4060;
+    text-decoration: none;
+}
+
+.loi a:hover {
+    color:#204A40;
+}
+
+.sb {
+    color: #c7c3bd;
+    border: 1px;
+    background-color: #204A40;
+    margin: 4%;
+    margin-bottom: 2%;
+}
+
