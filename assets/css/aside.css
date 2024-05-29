@@ -2,6 +2,8 @@ aside {
     padding: 20px;
     padding-left: 10%; 
     line-height: 150%;
+    color:  #204a40;
+    background-color:#f1f0e9 ;
 }
 
 .side {
@@ -21,5 +23,5 @@ aside a {
 }
 
 aside dt:hover {
-    background-color: rgb(211, 211, 211);
+    background-color: #d0d0a8;
 }
