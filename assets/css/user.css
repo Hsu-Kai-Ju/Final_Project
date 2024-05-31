@@ -1,6 +1,6 @@
 #tab {
             margin: 0 auto;
-            margin-top: 6%;
+            margin-top: 6%; 
             width: 500px;
             height: auto;
             background: #d0d0a8;
@@ -21,7 +21,7 @@
         /* 頁籤上的文字 */
         .tab_title a {
             text-decoration: none;
-            font-size: 15px;
+            font-size: 18px;
             color: #204a40;
             float: left;
             padding: 10px;
@@ -44,7 +44,40 @@
 
         .inform {
             text-align: center;
+            margin: 0 20px;
+            font-size: 18px;
         }
+
+        .inform a {
+            text-decoration: none;
+            color:  #204A40;
+            border: 1px;
+            border-radius: 5px;
+            background-color:  #d0d0a8;
+            padding: 5px;
+            margin-top: 15px; 
+            display: inline-block; 
+        }
+
+        .tab-content-3 table {
+            border-collapse: collapse;
+            margin: 10px auto;
+        }
+
+        .tab-content-3 th, tr,td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+        
+        
 
         .inform input[type="text"],
         .inform input[type="tel"],
@@ -93,7 +126,7 @@
         #tab-2:target ~ #tab > div.tab-content-2,
         #tab-3:target ~ #tab > div.tab-content-3 {
             visibility: visible;
-            height: auto;
+            height: 350px;
             background: #fff;
             padding-top: 15px;
         }
