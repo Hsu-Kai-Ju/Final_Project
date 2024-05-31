@@ -1,0 +1,105 @@
+#tab {
+            margin: 0 auto;
+            margin-top: 6%;
+            width: 500px;
+            height: auto;
+            background: #d0d0a8;
+            border: solid 1px #d0d0a8;
+            color: #204a40;
+        }
+
+        /* 頁籤ul */
+        .tab_title {
+            margin: 0;
+            padding: 10px 20px 0 20px;
+        }
+
+        .tab_title li {
+            list-style-type: none;
+        }
+
+        /* 頁籤上的文字 */
+        .tab_title a {
+            text-decoration: none;
+            font-size: 15px;
+            color: #204a40;
+            float: left;
+            padding: 10px;
+            margin-left: 5px;
+        }
+
+        /*頁籤div內容*/
+        #tab div {
+            clear: both;
+            padding-top: 0 15px;
+            height:0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+       #tab div p {
+            padding-top: 15px;
+            margin-left: 15px;
+        }
+
+        .inform {
+            text-align: center;
+        }
+
+        .inform input[type="text"],
+        .inform input[type="tel"],
+        .inform input[type="email"],
+        .inform input[type="password"] {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+            margin-bottom: 15px;
+            padding: 5px;
+            font-size: 16px;
+            width: 80%;
+        }
+
+        /*第一筆的底色*/
+        span:target ~ #tab > ul li:first-child a {
+            background: #d0d0a8;
+        }
+
+        span:target ~ #tab > div:first-of-type {
+            visibility: hidden;
+            height: 0;
+            padding: 0 15px;
+        }
+
+        /*頁籤變換&第一筆*/
+        span ~ #tab > ul li:first-child a,
+        #tab-1:target ~ #tab > ul li a[href$="#tab-1"],
+        #tab-2:target ~ #tab > ul li a[href$="#tab-2"],
+        #tab-3:target ~ #tab > ul li a[href$="#tab-3"] {
+            background: #fff;
+            border-radius: 5px 5px 0 0;
+        }
+
+        span ~ #tab > ul li:first-child a::before,
+        #tab-1:target ~ #tab > ul li a[href$="#tab-1"]::before,
+        #tab-2:target ~ #tab > ul li a[href$="#tab-2"]::before,
+        #tab-3:target ~ #tab > ul li a[href$="#tab-3"]::before {
+            background-color: white;
+            height: 100%;
+        }
+
+        /*頁籤內容顯示&第一筆*/
+        span ~ #tab > div:first-of-type,
+        #tab-1:target ~ #tab > div.tab-content-1,
+        #tab-2:target ~ #tab > div.tab-content-2,
+        #tab-3:target ~ #tab > div.tab-content-3 {
+            visibility: visible;
+            height: auto;
+            background: #fff;
+            padding-top: 15px;
+        }
+
+        span {
+            display: none;
+        }
+
+    

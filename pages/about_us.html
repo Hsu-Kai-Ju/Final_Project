@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="../assets/css/webstyle.css">
 
     <style>
-    .main {
+    .txt {
         display: flex;
-        flex-direction: row;
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
+        margin-right: 25%;
+        color: #204a40;
     }
+
 
     .item {
         display: flex;
@@ -28,7 +31,7 @@
         transition: transform 0.5s ease;
     }
 
-    img:hover  {
+    .item img:hover  {
         transform: rotateY(180deg);
     }
 
@@ -39,6 +42,7 @@
         border: none;
         border-top: 1px dashed ;
     }
+
     .ex {
         border: solid;
         border-radius: 5%;
@@ -73,30 +77,29 @@
         <aside></aside>
     
         <main>
-            <div class="item">
-                <img style="border-radius: 15%;" src="../assets/image/photo/P-11043112.jpg" alt="">
-                <div class="ex">
-                    <P>許凱茹</P>
-                    <p>很有趣但很累，條間距調到發瘋</p>
+            <div class="txt">
+                <div class="item">
+                    <img style="border-radius: 15%;" src="../assets/image/photo/P-11043112.jpg" alt="">
+                    <div class="ex">
+                        <P>許凱茹</P>
+                        <p>很有趣但很累，條間距調到發瘋</p>
+                    </div>
                 </div>
-            </div>
-            <div class="hl"><hr style="color: rgba(242, 247, 250, 0.942);"></div>
-
-            <div class="item">
-                <img style="border-radius: 15%;" src="../assets/image/photo/P-11043112.jpg" alt="">
-                <div class="ex">
-                    <p>賴芷涵</p>
-                    <p>心得</p>
+                <div class="hl"><hr style="color: rgba(242, 247, 250, 0.942);"></div>
+                <div class="item">
+                    <img style="border-radius: 15%;" src="../assets/image/photo/P-11043112.jpg" alt="">
+                    <div class="ex">
+                        <p>賴芷涵</p>
+                        <p>心得</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="hl"><hr style="color: rgba(242, 247, 250, 0.942);"></div>
-
-            <div class="item">
-                <img style="border-radius: 15%;" src="../assets/image/photo/P-11043112.jpg" alt="">
-                <div class="ex">
-                    <p>陳洺安</p>
-                    <p>心得</p>
+                <div class="hl"><hr style="color: rgba(242, 247, 250, 0.942);"></div>
+                <div class="item">
+                    <img style="border-radius: 15%;" src="../assets/image/photo/P-11043112.jpg" alt="">
+                    <div class="ex">
+                        <p>陳洺安</p>
+                        <p>心得</p>
+                    </div>
                 </div>
             </div>
         </main>

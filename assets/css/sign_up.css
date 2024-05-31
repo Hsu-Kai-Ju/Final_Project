@@ -1,14 +1,14 @@
 .signup {
     border: solid 1px #204A40;
     padding: 10px;
-    padding-top: 4%;
+    padding-top: 3%;
     width: 350px;
     height: 380px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
     text-align: center;
-    line-height: 220%;
+    line-height: 230%;
 
     position:relative;   
     margin: auto;
@@ -17,6 +17,10 @@
     left: -10%;
 
     color: #204A40;
+}
+
+.signup h2 {
+    font-family:'Times New Roman', Times, serif;
 }
 
 .loi a {
@@ -32,7 +36,7 @@
     color: #c7c3bd;
     border: 1px;
     background-color: #204A40;
-    margin: 4%;
+    margin: 5%;
     margin-bottom: 2%;
 }
 
