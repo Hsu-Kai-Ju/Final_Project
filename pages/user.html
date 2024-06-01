@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="../assets/css/webstyle.css">
     <link rel="stylesheet" href="../assets/css/aside.css">
     <link rel="stylesheet" href="../assets/css/user.css">
-    <style>
-
-    </style>
-        
+    <script type = "text/javascript" src="../assets/js/cart.js"></script>    
 </head>
 <body>
     <div class = "container">
@@ -21,8 +18,9 @@
                 </div>
                 <div class="right">
                     <a href="about_us.html">關於我們</a>
-                    <a href="log_in.html"><img src="../assets/image/icon/user.png" alt="會員中心"></a>
-                    <a href=""><img src="../assets/image/icon/cart.png" alt="購物車"></a>
+                    <a href="log_in.html">註冊/登入</a>
+                    <a href="user.html"><img src="../assets/image/icon/user.png" alt="會員中心"></a>
+                    <button class="cart-button" onclick="goCart()"><i class="clCart"></i><img src="../assets/image/icon/cart.png" alt="購物車"></button>
                 </div>
             </nav> 
         </header>
@@ -54,19 +52,21 @@
             </div>
         </aside>
         <main>
-            <span id="tab-1">個人資料</span>
-            <span id="tab-2">訂單</span>
+            <!--會員資料-->
+            <span id="tab-1">會員資料</span>
+            <span id="tab-2">訂單狀況</span>
             <span id="tab-3">購買紀錄</span>
 
             <div id="tab">
                 <ul class="tab_title">
                     <!-- 頁籤 -->
-                    <li><a href="#tab-1">個人資料</a></li>
-                    <li><a href="#tab-2">訂單</a></li>
+                    <li><a href="#tab-1">會員資料</a></li>
+                    <li><a href="#tab-2">訂單狀況</a></li>
                     <li><a href="#tab-3">購買紀錄</a></li>
                 </ul>
             
                 <!-- 內容 -->
+                <!--會員資料-->
                 <div class="tab-content-1">
                     <form method="post" class="inform">
                         姓名：<input type="text" value="陳小明"><br>
@@ -77,54 +77,115 @@
                         地址：<input type="text" value=" 320桃園市中壢區中北路200號"><br>
 
                         <a href="revise.html">修改資料</a>
-
                     </form>
+                </div>
 
-                </div>
+                <!--訂單資料-->
                 <div class="tab-content-2">
-                  
-                </div>
-                <div class="tab-content-3">
-                  <table>
+                  <table class="order" style="width: 580px;">
                     <tr>
-                        <th colspan="5" class="align-left">
-                            訂單編號：B12236484<br>
-                            訂購日期：2024/3/15
-                        </th>
+                        <td colspan="5" class="align-left">
+                            訂單編號：B12225643<br>
+                            訂購日期：2024/5/10
+                        </td>
                     </tr>
                     <tr class="align-center">
-                        <th></th>
-                        <th>品項</th>
-                        <th>價格</th>
-                        <th>個數</th>
-                        <th>商品評價</th>
+                        <td></td>
+                        <td>品項</td>
+                        <td>價格</td>
+                        <td>個數</td>
+                        <td>狀態</td>
                     </tr>
                     <tr>
-                        <th>1</th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <td>1</td>
+                        <td><img style="width: 80px;" src="../assets/image/book/MP/MP 2-1.png" alt=""><br>name</td>
+                        <td>NT$250</td>
+                        <td>1</td>
+                        <td rowspan="2">已到達取貨商店</td>
                     </tr>
                     <tr>
-                        <th>2</th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <td>2</td>
+                        <td><img style="width: 80px;" src="../assets/image/book/MP/MP 1-1.png" alt=""><br>name</td>
+                        <td>NT$250</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <th colspan="5" class="align-left"> 
-                            樣數：2  總價：
-                        </th>
+                        <td colspan="5" class="align-right"> 
+                            總數量：2 <br>
+                            總金額：NT$250
+                        </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!--購買紀錄-->
+                <div class="tab-content-3">
+                  <table class="history">
+                    <tr>
+                        <td colspan="5" class="align-left">
+                            訂單編號：B12236484<br>
+                            訂購日期：2024/3/15
+                        </td>
+                    </tr>
+                    <tr class="align-center">
+                        <td></td>
+                        <td>品項</td>
+                        <td>價格</td>
+                        <td>個數</td>
+                        <td>商品評價</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><img style="width: 80px;" src="../assets/image/book/AC/AC 3-1.png" alt=""><br>name</td>
+                        <td>NT$250</td>
+                        <td>1</td>
+                        <td>很好用！外面還有透明書套防止刮到或折到！</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="align-right"> 
+                            總數量：1 <br>
+                            總金額：NT$250
+                        </td>
                     </tr>
                   </table>
                 </div>
             </div>
-           
-            
-            
 
+            <!--購物車--->
+            <div class="cart-menu" id="cart-menu">
+                <form action="">
+                    <table>
+                        <tr>
+                            <td colspan="2"><h3 style="text-align: center;">購物車內容</h3></td>
+                        </tr>
+                        <tr class="good1">
+                            <button class="close-button" onclick="out()">×</button>
+                            <td><img src="../assets/image/book/NOTE/NOTE 4-1.png" alt=""></td>
+                            <td>name <br> NT$300 <br>
+                            <div class="addmin">
+                                <input type="button" value="-" class="but" onclick="minus(0)">
+                                <input id="qty0" style="width: 10px;" type="text" value="1" class="qua">
+                                <input type="button" value="+" class="but" onclick="add(0)">
+                            </div>
+                            </td>
+                        </tr>
+                        <tr class="good2">
+                            <td><img src="../assets/image/book/HB/HB 2-1.png" alt=""></td>
+                            <td>name <br>  NT$450 <br>
+                            <div class="addmin">
+                                <input type="button" value="-" class="but" onclick="minus(1)">
+                                <input id="qty1" style="width: 10px;" type="text" value="1" class="qua">
+                                <input type="button" value="+" class="but" onclick="add(1)">
+                            </div>
+                        </tr>
+                    </table>
+                    <hr>
+                    <div class="total">
+                        <p>金額 <span id="total-price">NT$750</span></p>
+                        <div class="pay"><a href="pay.html">前往結帳</a></div>
+                    </div>
+                </form>
+            </div>
         </main>
         <footer>
             <div class="content">

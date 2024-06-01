@@ -6,6 +6,8 @@
     <title>SIGN UP</title>
     <link rel="stylesheet" href="../assets/css/webstyle.css">
     <link rel="stylesheet" href="../assets/css/sign_up.css">
+    <script type = "text/javascript" src="../assets/js/cart.js"></script>
+    
 </head>
 <body>
     <div class = "container">
@@ -16,13 +18,15 @@
                 </div>
                 <div class="right">
                     <a href="about_us.html">關於我們</a>
-                    <a href="log_in.html"><img src="../assets/image/icon/user.png" alt="會員中心"></a>
-                    <a href=""><img src="../assets/image/icon/cart.png" alt="購物車"></a>
+                    <a href="log_in.html">註冊/登入</a>
+                    <a href="user.html"><img src="../assets/image/icon/user.png" alt="會員中心"></a>
+                    <button class="cart-button" onclick="goCart()"><i class="clCart"></i><img src="../assets/image/icon/cart.png" alt="購物車"></button>
                 </div>
             </nav> 
         </header>
         <aside></aside>
         <main>
+            <!--註冊-->
             <div class="signup">
                 <h2>Sign Up</h2>
                 <form method="post">
@@ -37,8 +41,44 @@
                     <a href="user.html"><div class="sb">加入會員</div></a>
                     <div class="loi"><a href="log_in.html"><h5>現有帳號</h5></a></div>
                 </form>
-                
             </div>
+
+            <!--購物車--->
+            <div class="cart-menu" id="cart-menu">
+                <form action="">
+                    <table>
+                        <tr>
+                            <td colspan="2"><h3 style="text-align: center;">購物車內容</h3></td>
+                        </tr>
+                        <tr class="good1">
+                            <button class="close-button" onclick="out()">×</button>
+                            <td><img src="../assets/image/book/NOTE/NOTE 4-1.png" alt=""></td>
+                            <td>name <br> NT$300 <br>
+                            <div class="addmin">
+                                <input type="button" value="-" class="but" onclick="minus(0)">
+                                <input id="qty0" style="width: 10px;" type="text" value="1" class="qua">
+                                <input type="button" value="+" class="but" onclick="add(0)">
+                            </div>
+                            </td>
+                        </tr>
+                        <tr class="good2">
+                            <td><img src="../assets/image/book/HB/HB 2-1.png" alt=""></td>
+                            <td>name <br>  NT$450 <br>
+                            <div class="addmin">
+                                <input type="button" value="-" class="but" onclick="minus(1)">
+                                <input id="qty1" style="width: 10px;" type="text" value="1" class="qua">
+                                <input type="button" value="+" class="but" onclick="add(1)">
+                            </div>
+                        </tr>
+                    </table>
+                    <hr>
+                    <div class="total">
+                        <p>金額 <span id="total-price">NT$750</span></p>
+                        <div class="pay"><a href="pay.html">前往結帳</a></div>
+                    </div>
+                </form>
+            </div>
+            
         </main>
     
         <footer>

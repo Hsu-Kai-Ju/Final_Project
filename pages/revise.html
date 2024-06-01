@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../assets/css/webstyle.css">
     <link rel="stylesheet" href="../assets/css/aside.css">
     <link rel="stylesheet" href="../assets/css/user.css">
+    <script type = "text/javascript" src="../assets/js/cart.js"></script>
+    
     <style>
         .save {
             background: none;
@@ -35,8 +37,9 @@
                 </div>
                 <div class="right">
                     <a href="about_us.html">關於我們</a>
-                    <a href="log_in.html"><img src="../assets/image/icon/user.png" alt="會員中心"></a>
-                    <a href=""><img src="../assets/image/icon/cart.png" alt="購物車"></a>
+                    <a href="log_in.html">註冊/登入</a>
+                    <a href="user.html"><img src="../assets/image/icon/user.png" alt="會員中心"></a>
+                    <button class="cart-button" onclick="goCart()"><i class="clCart"></i><img src="../assets/image/icon/cart.png" alt="購物車"></button>
                 </div>
             </nav> 
         </header>
@@ -68,15 +71,17 @@
             </div>
         </aside>
         <main>
-            <span id="tab-1">個人資料</span>
-            <span id="tab-2">訂單</span>
+            
+            <!--會員資料-->
+            <span id="tab-1">會員資料</span>
+            <span id="tab-2">訂單狀況</span>
             <span id="tab-3">購買紀錄</span>
 
             <div id="tab">
                 <ul class="tab_title">
                     <!-- 頁籤 -->
-                    <li><a href="#tab-1">個人資料</a></li>
-                    <li><a href="#tab-2">訂單</a></li>
+                    <li><a href="#tab-1">會員資料</a></li>
+                    <li><a href="#tab-2">訂單狀況</a></li>
                     <li><a href="#tab-3">購買紀錄</a></li>
                 </ul>
             
@@ -92,8 +97,6 @@
 
                         <input class="save" type="submit" value="儲存">
                         <a href="user.html">取消</a>
-        
-
                     </form>
 
                 </div>
@@ -104,11 +107,45 @@
                   <p>頁面2顯示的內容</p>
                 </div>
             </div>
-           
-            
-            
 
+            <!--購物車--->
+            <div class="cart-menu" id="cart-menu">
+                <form action="">
+                    <table>
+                        <tr>
+                            <td colspan="2"><h3 style="text-align: center;">購物車內容</h3></td>
+                        </tr>
+                        <tr class="good1">
+                            <button class="close-button" onclick="out()">×</button>
+                            <td><img src="../assets/image/book/NOTE/NOTE 4-1.png" alt=""></td>
+                            <td>name <br> NT$300 <br>
+                            <div class="addmin">
+                                <input type="button" value="-" class="but" onclick="minus(0)">
+                                <input id="qty0" style="width: 10px;" type="text" value="1" class="qua">
+                                <input type="button" value="+" class="but" onclick="add(0)">
+                            </div>
+                            </td>
+                        </tr>
+                        <tr class="good2">
+                            <td><img src="../assets/image/book/HB/HB 2-1.png" alt=""></td>
+                            <td>name <br>  NT$450 <br>
+                            <div class="addmin">
+                                <input type="button" value="-" class="but" onclick="minus(1)">
+                                <input id="qty1" style="width: 10px;" type="text" value="1" class="qua">
+                                <input type="button" value="+" class="but" onclick="add(1)">
+                            </div>
+                        </tr>
+                    </table>
+                    <hr>
+                    <div class="total">
+                        <p>金額 <span id="total-price">NT$750</span></p>
+                        <div class="pay"><a href="pay.html">前往結帳</a></div>
+                    </div>
+                </form>
+            </div>
+            
         </main>
+
         <footer>
             <div class="content">
                 <p>聯絡資訊：</p>

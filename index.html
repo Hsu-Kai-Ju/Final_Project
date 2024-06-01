@@ -8,6 +8,38 @@
     <link rel="stylesheet" href="../Final_Project/assets/css/aside.css">
     <link rel="stylesheet" href="../Final_Project/assets/css/ad.css">
     <script type = "text/javascript" src="../Final_Project/assets/js/Carousel.js"></script>
+    <script type = "text/javascript" src="../Final_Project/assets/js/cart.js"></script>
+    <style>
+        .hot table {
+            width: 85%;
+            margin: 5% auto;
+            border: 1px solid;
+        }
+        .hot th, td {
+            text-align: center;
+            padding: 10px;
+        }
+        .hot th {
+            background-color: #f2f2f2;
+        }
+        .hot td {
+            border: 1px solid #ddd;
+        }
+        .hot h1, h2 {
+            margin: 0;
+        }
+
+        .hot img {
+            margin-right: 10px; /* 調整圖片和文字之間的距離 */
+            width: 50px; /* 調整圖片大小 */
+            height: 50px; /* 調整圖片大小 */
+        
+        }
+
+        
+
+
+    </style>
 <body>
     <div class = "container">
         <header>
@@ -17,8 +49,9 @@
                 </div>
                 <div class="right">
                     <a href="../Final_Project/pages/about_us.html">關於我們</a>
-                    <a href="../Final_Project/pages/log_in.html"><img src="../Final_Project/assets/image/icon/user.png" alt="會員中心"></a>
-                    <a href=""><img src="../Final_Project/assets/image/icon/cart.png" alt="購物車">
+                    <a href="../Final_Project/pages/log_in.html">註冊/登入</a>
+                    <a href="../Final_Project/pages/user.html"><img src="../Final_Project/assets/image/icon/user.png" alt="會員中心"></a>
+                    <button class="cart-button" onclick="goCart()"><i class="clCart"></i><img src="../Final_Project/assets/image/icon/cart.png" alt="購物車"></button>
                 </div>
             </nav> 
         </header>
@@ -49,7 +82,7 @@
                 </dl>
             </div>
         </aside>
-        <main>
+        <main id="main-txt">
             <!--動態廣告--->
             <div class = "adv">
                 <div class = "slide fade">
@@ -73,9 +106,74 @@
                 <span class="dot" onclick = "showSlides(2)"></span>
                 <span class="dot" onclick = "showSlides(3)"></span>
             </div>
+
+            <!--熱銷排行-->
+            <div class="hot">
+                <table>
+                    <tr>
+                        <th colspan="3"><h1>熱銷排行</h1></th>
+                    </tr>
+                    <tr>
+                        <td ><img src="../Final_Project/assets/image/icon/top1.png" alt=""><h2>Top 1</h2></td>
+                        <td ><img src="../Final_Project/assets/image/icon/top2.png" alt=""><h2>Top 2</h2></td>
+                        <td ><img src="../Final_Project/assets/image/icon/top3.png" alt=""><h2>Top 3</h2></td>
+                    </tr>
+                    <tr>
+                        <td>photo</td>
+                        <td>photo</td>
+                        <td>photo</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>name</td>
+                        <td>name</td>
+                    </tr>
+                </table>
+            </div>
+            
+            
+            
+            <!--購物車--->
+            <div class="cart-menu" id="cart-menu">
+                <form action="">
+                    <table>
+                        <tr>
+                            <td colspan="2"><h3 style="text-align: center;">購物車內容</h3></td>
+                        </tr>
+                        <tr class="good1">
+                            <button class="close-button" onclick="out()">×</button>
+                            <td><img src="../Final_Project/assets/image/book/NOTE/NOTE 4-1.png" alt=""></td>
+                            <td>name <br> NT$300 <br>
+                            <div class="addmin">
+                                <input type="button" value="-" class="but" onclick="minus(0)">
+                                <input id="qty0" style="width: 10px;" type="text" value="1" class="qua">
+                                <input type="button" value="+" class="but" onclick="add(0)">
+                            </div>
+                            </td>
+                        </tr>
+                        <tr class="good2">
+                            <td><img src="../Final_Project/assets/image/book/HB/HB 2-1.png" alt=""></td>
+                            <td>name <br>  NT$450 <br>
+                            <div class="addmin">
+                                <input type="button" value="-" class="but" onclick="minus(1)">
+                                <input id="qty1" style="width: 10px;" type="text" value="1" class="qua">
+                                <input type="button" value="+" class="but" onclick="add(1)">
+                            </div>
+                        </tr>
+                    </table>
+                    <hr>
+                    <div class="total">
+                        <p>金額 <span id="total-price">NT$750</span></p>
+                        <div class="pay"><a href="../Final_Project/pages/pay.html">前往結帳</a></div>
+                    </div>
+                </form>
+                </div>
+             
+
             
 
         </main>
+
         <footer>
             <div class="content">
                 <p>聯絡資訊：</p>
@@ -88,5 +186,6 @@
             <p>copyright@2024</p>
         </footer>
     </div>
+
 </body>
 </html>

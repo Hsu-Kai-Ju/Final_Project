@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/webstyle.css">
+    <link rel="stylesheet" href="../assets/css/aside.css">
+    <script type = "text/javascript" src="../assets/js/cart.js"></script>  
+
+    <style>
+        .order table {
+            margin: 5% auto;
+            text-align: center;
+            border: 1px solid;
+            border-radius: 5px;
+            width: 500px;
+            color: #204a40;
+        }
+        
+        .order tr, 
+        .order td,
+        .order th {
+            padding: 10px;
+            border-bottom: 1px dashed;
+        }
+
+        .order img {
+            width: 100px;
+            border: #204a40 solid 1px;
+            border-radius: 5%;
+        }
+
+        .order-left {
+            margin-left: 350px;
+
+        }
+
+        .trans table {
+            margin: 5% auto;
+            border: 1px solid;
+            border-radius: 5px;
+            width: 500px;
+            color: #204a40;
+            margin-bottom: 30px;
+        }
+
+        .trans th,
+        .trans td {
+            padding: 10px;
+            border-bottom: 1px dashed;
+        }
+
+        .sub {
+            border: 1px sold;
+            border-radius: 10px;
+            background-color: #d0d0a8;
+            width: 50px;
+            height: autox;
+            text-align: center;
+            padding: 5px;
+            margin: 20px auto;
+            color: #204a40;
+        }
+
+        .sub:hover {
+            color: antiquewhite;
+        }
+
+
+
+    </style>
+    
+</head>
+<body>
+    <div class = "container">
+        <header>
+            <nav>
+                <div class="left">
+                    <a href="../index.html">記・敘</a>
+                </div>
+                <div class="right">
+                    <a href="about_us.html">關於我們</a>
+                    <a href="log_in.html">註冊/登入</a>
+                    <a href="user.html"><img src="../assets/image/icon/user.png" alt="會員中心"></a>
+                    <button class="cart-button" onclick="goCart()"><i class="clCart"></i><img src="../assets/image/icon/cart.png" alt="購物車"></button>
+                </div>
+            </nav> 
+        </header>
+        <aside>
+            <h3 style="text-align: center;">CATEGORIES</h3>
+            <div class="side">
+                <p>用途</p>
+                <dl>
+                    <dt><a href="">日計畫</a></dt>
+                    <dt><a href="">週計畫</a></dt>
+                    <dt><a href="">月計畫</a></dt>
+                    <dt><a href="">手帳本</a></dt>
+                    <dt><a href="">記帳本</a></dt>
+                    <dt><a href="">筆記本</a></dt>
+                </dl>
+                <p>大小</p>
+                <dl>
+                    <dt><a href="">A4</a></dt>
+                    <dt><a href="">B5</a></dt>
+                    <dt><a href="">A5</a></dt>
+                </dl>
+                <p>內頁</p>
+                <dl>
+                    <dt><a href="">點陣</a></dt>
+                    <dt><a href="">網格</a></dt>
+                    <dt><a href="">橫線</a></dt>
+                    <dt><a href="">空白頁</a></dt>
+                </dl>
+            </div>
+        </aside>
+        <main>
+            <!--結帳-->
+            <div class="order">
+                <table>
+                    <tr>
+                        <th colspan="4"><h3>訂單內容</h3></th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">品項</th>
+                        <th>單價</th>
+                        <th>數量</th>
+                    </tr>
+                    <tr>
+                        <td><a href=""><img src="../assets/image/book/NOTE/NOTE 4-1.png" alt=""></a></td>
+                        <td>綠色筆記本</td>
+                        <td>NT$300</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><a href=""><img src="../assets/image/book/HB/HB 2-1.png" alt=""></a></td>
+                        <td>綠色筆記本</td>
+                        <td>NT$450</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><div class="order-left">金額：NT$750</div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><div class="order-left">運費：NT$60</div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><div class="order-left">總計：NT$810</div></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--訂購資訊-->
+            <div class="trans"> 
+                <table>
+                    <tr>
+                        <th colspan="2"><h3>取貨資訊</h3></th>
+                    </tr>
+                    <tr>
+                        <td>運送方式
+                        <select name="shipping_method" id="shipping_method">
+                            <option value="black_cat">黑貓宅急便</option>
+                            <option value="7_11">7-11</option>
+                            <option value="family_mart">全家</option>
+                            <option value="ok_mart">OK</option>
+                            <option value="hi_life">萊爾富</option>
+                        </select>
+                        <td>付款方式
+                            <select name="shipping_method" id="shipping_method">
+                                <option>貨到付款</option>
+                                <option>線上刷卡</option>
+                            </select>
+                            </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;"><h3>訂購人資訊</h3></td>
+                    </tr>
+                    <tr>
+                        <td>姓名：<input type="text"></td>
+                        <td>電話：<input type="tel"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">地址：<input type="text" style="width: 400px;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">備註：<textarea style="width: 450px; height:80px;"></textarea></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="sub" onclick="Finish()">送出</div>
+            <script>
+               function Finish() {
+                window.alert("已完成訂單！")
+               }
+            </script>
+            
+
+            <!--購物車--->
+            <div class="cart-menu" id="cart-menu">
+            <form action="">
+                <table>
+                    <tr>
+                        <td colspan="2"><h3 style="text-align: center;">購物車內容</h3></td>
+                    </tr>
+                    <tr class="good1">
+                        <button class="close-button" onclick="out()">×</button>
+                        <td><img src="../assets/image/book/NOTE/NOTE 4-1.png" alt=""></td>
+                        <td>name <br> NT$300 <br>
+                        <div class="addmin">
+                            <input type="button" value="-" class="but" onclick="minus(0)">
+                            <input id="qty0" style="width: 10px;" type="text" value="1" class="qua">
+                            <input type="button" value="+" class="but" onclick="add(0)">
+                        </div>
+                        </td>
+                    </tr>
+                    <tr class="good2">
+                        <td><img src="../assets/image/book/HB/HB 2-1.png" alt=""></td>
+                        <td>name <br>  NT$450 <br>
+                        <div class="addmin">
+                            <input type="button" value="-" class="but" onclick="minus(1)">
+                            <input id="qty1" style="width: 10px;" type="text" value="1" class="qua">
+                            <input type="button" value="+" class="but" onclick="add(1)">
+                        </div>
+                    </tr>
+                </table>
+                <hr>
+                <div class="total">
+                    <p>金額 <span id="total-price">NT$750</span></p>
+                    <div class="pay"><a href="pay.html">前往結帳</a></div>
+                </div>
+            </form>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="content">
+                <p>聯絡資訊：</p>
+                <div class="icon">
+                    <a href="mailto:cyimsa@yahoo.com.tw"><img src="../assets/image/icon/email2-.png" alt=""></a>
+                    <a href="https://www.facebook.com/cyimsa/?locale=zh_TW" target="_blank"><img src="../assets/image/icon/fb1.png" alt=""></a>
+                    <a href="tel:(03 )2655401 "><img src="../assets/image/icon/phone2.png" alt=""></a>
+                </div>
+            </div>
+            <p>copyright@2024</p>
+        </footer>
+    </div>
+
+
+</body>
+</html>
