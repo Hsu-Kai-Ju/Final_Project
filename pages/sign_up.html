@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="../assets/css/webstyle.css">
     <link rel="stylesheet" href="../assets/css/sign_up.css">
     <script type = "text/javascript" src="../assets/js/cart.js"></script>
+
+    <script>
+        function toggleSearch() {
+        var searchBar = document.getElementById("searchBar");
+        if (searchBar.style.display === "none") {
+            searchBar.style.display = "flex";
+        } else {
+            searchBar.style.display = "none";
+        }
+    }
+    </script>
     
 </head>
 <body>
@@ -17,6 +28,12 @@
                     <a href="../index.html">記・敘</a>
                 </div>
                 <div class="right">
+                    <div id="searchBar" class="wrap" style="display: none;">
+                        <div class="search"><input type="text" class="search-bar"></div>
+                    </div>
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <img src="../assets/image/icon/search.png" alt="搜索">
+                    </button>
                     <a href="about_us.html">關於我們</a>
                     <a href="log_in.html">註冊/登入</a>
                     <a href="user.html"><img src="../assets/image/icon/user.png" alt="會員中心"></a>
@@ -30,15 +47,15 @@
             <div class="signup">
                 <h2>Sign Up</h2>
                 <form method="post">
-                    姓名：<input type="text" placeholder=" 請輸入您的大名"><br>
-                    電話：<input type="tel" placeholder=" 0900-000-000"><br>
-                    E-mail：<input type="email" placeholder=" example@gmail.com"><br>
-                    生日：<input type="text" placeholder=" YYYY/MM/DD"><br>
-                    密碼：<input type="password" placeholder=" 6~8位英數字"><br>
-                    地址：<input type="text" placeholder=" 請輸入您的地址"><br>
+                    姓名：<input type="text" placeholder=" 請輸入您的大名" required><br>
+                    電話：<input type="tel" placeholder=" 0900-000-000" required><br>
+                    E-mail：<input type="email" placeholder=" example@gmail.com" required><br>
+                    生日：<input type="text" placeholder=" YYYY/MM/DD" required><br>
+                    密碼：<input type="password" placeholder=" 6~8位英數字" required><br>
+                    地址：<input type="text" placeholder=" 請輸入您的地址" required><br>
                     <input type="checkbox"> 已了解相關聲明與使用權限
 
-                    <a href="user.html"><div class="sb">加入會員</div></a>
+                    <div class="sb"><input type="submit" value="加入會員"></div>
                     <div class="loi"><a href="log_in.html"><h5>現有帳號</h5></a></div>
                 </form>
             </div>

@@ -7,7 +7,18 @@
     <link rel="stylesheet" href="../assets/css/webstyle.css">
     <link rel="stylesheet" href="../assets/css/log_in.css">
     <script type = "text/javascript" src="../assets/js/cart.js"></script>
-    
+
+    <script>
+        function toggleSearch() {
+        var searchBar = document.getElementById("searchBar");
+        if (searchBar.style.display === "none") {
+            searchBar.style.display = "flex";
+        } else {
+            searchBar.style.display = "none";
+        }
+    }
+    </script>
+  
 </head>
 <body>
     <div class = "container">
@@ -17,6 +28,12 @@
                     <a href="../index.html">記・敘</a>
                 </div>
                 <div class="right">
+                    <div id="searchBar" class="wrap" style="display: none;">
+                        <div class="search"><input type="text" class="search-bar"></div>
+                    </div>
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <img src="../assets/image/icon/search.png" alt="搜索">
+                    </button>
                     <a href="about_us.html">關於我們</a>
                     <a href="log_in.html">註冊/登入</a>
                     <a href="user.html"><img src="../assets/image/icon/user.png" alt="會員中心"></a>
@@ -29,9 +46,9 @@
             <!--登入-->
             <div class="login">
                 <h2>Log In</h2>
-                <form method="post">
-                    帳號：<input type="text" name = "userID" placeholder=" E-mail"><br>
-                    密碼：<input type="password" name = "Password" placeholder=" 6~8位英數字"><br>
+                <form method="post" action="user.html" onsubmit="return validateForm()">
+                    帳號：<input type="text" name = "userID" placeholder=" E-mail" required><br>
+                    密碼：<input type="password" name = "Password" placeholder=" 6~8位英數字" required><br>
                     <h4 style="margin:2%;">使用其他方法登入</h4>
                     <other_login>
                         <div class="login_option">
@@ -45,14 +62,14 @@
                         </div>
                     </other_login>
 
-                    <a href="user.html"><div class="lb">登入</div></a>
+                    <div class="lb"><input type="submit" value="登入"></div>
                     <div class="su"><a href="sign_up.html"><h5>註冊帳號</h5></a></div>
                 </form>
             </div>
 
             <!--購物車--->
             <div class="cart-menu" id="cart-menu">
-                <form action="">
+                <form action="" onsubmit="return validateForm()">
                     <table>
                         <tr>
                             <td colspan="2"><h3 style="text-align: center;">購物車內容</h3></td>

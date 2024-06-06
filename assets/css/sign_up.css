@@ -32,11 +32,14 @@
     color:#204A40;
 }
 
-.sb {
+.sb input[type="submit"] {
     color: #c7c3bd;
-    border: 1px;
+    border: 1px solid #204A40;
     background-color: #204A40;
+    width: 320px;
+    height: 35px;
     margin: 5%;
     margin-bottom: 2%;
+    font-size: 14px; 
 }
 

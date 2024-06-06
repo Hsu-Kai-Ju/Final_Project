@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="../assets/css/aside.css">
     <script type = "text/javascript" src="../assets/js/cart.js"></script>  
 
+    <script>
+        function toggleSearch() {
+        var searchBar = document.getElementById("searchBar");
+        if (searchBar.style.display === "none") {
+            searchBar.style.display = "flex";
+        } else {
+            searchBar.style.display = "none";
+        }
+    }
+    </script>
+
     <style>
         .order table {
             margin: 5% auto;
@@ -17,12 +28,16 @@
             width: 500px;
             color: #204a40;
         }
+        .order th {
+            background-color:#d0d0a8;
+        }
         
         .order tr, 
         .order td,
         .order th {
             padding: 10px;
             border-bottom: 1px dashed;
+            
         }
 
         .order img {
@@ -49,6 +64,10 @@
         .trans td {
             padding: 10px;
             border-bottom: 1px dashed;
+        }
+        
+        .trans th {
+            background-color:#d0d0a8;
         }
 
         .sub {
@@ -80,6 +99,12 @@
                     <a href="../index.html">記・敘</a>
                 </div>
                 <div class="right">
+                    <div id="searchBar" class="wrap" style="display: none;">
+                        <div class="search"><input type="text" class="search-bar"></div>
+                    </div>
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <img src="../assets/image/icon/search.png" alt="搜索">
+                    </button>
                     <a href="about_us.html">關於我們</a>
                     <a href="log_in.html">註冊/登入</a>
                     <a href="user.html"><img src="../assets/image/icon/user.png" alt="會員中心"></a>
@@ -115,16 +140,16 @@
             </div>
         </aside>
         <main>
-            <!--結帳-->
+            <!--訂單內容-->
             <div class="order">
                 <table>
                     <tr>
                         <th colspan="4"><h3>訂單內容</h3></th>
                     </tr>
                     <tr>
-                        <th colspan="2">品項</th>
-                        <th>單價</th>
-                        <th>數量</th>
+                        <td colspan="2">品項</td>
+                        <td>單價</td>
+                        <td>數量</td>
                     </tr>
                     <tr>
                         <td><a href=""><img src="../assets/image/book/NOTE/NOTE 4-1.png" alt=""></a></td>

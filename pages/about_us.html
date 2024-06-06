@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="../assets/css/webstyle.css">
     <link rel="stylesheet" href="../assets/css/about_us.css">
     <script type = "text/javascript" src="../assets/js/cart.js"></script>
+
+    <script>
+        function toggleSearch() {
+        var searchBar = document.getElementById("searchBar");
+        if (searchBar.style.display === "none") {
+            searchBar.style.display = "flex";
+        } else {
+            searchBar.style.display = "none";
+        }
+    }
+    </script>
     
 </head>
 <body>
@@ -17,6 +28,12 @@
                     <a href="../index.html">記・敘</a>
                 </div>
                 <div class="right">
+                    <div id="searchBar" class="wrap" style="display: none;">
+                        <div class="search"><input type="text" class="search-bar"></div>
+                    </div>
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <img src="../assets/image/icon/search.png" alt="搜索">
+                    </button>
                     <a href="about_us.html">關於我們</a>
                     <a href="log_in.html">註冊/登入</a>
                     <a href="user.html"><img src="../assets/image/icon/user.png" alt="會員中心"></a>
@@ -33,7 +50,7 @@
                     <img style="border-radius: 15%;" src="../assets/image/photo/P-11043112.jpg" alt="">
                     <div class="ex">
                         <P>許凱茹</P>
-                        <p>很有趣但很累，條間距調到發瘋</p>
+                        <p>製作的過程雖然很辛苦，需要一直切換視窗看看物件的位置是不是在理想的位置上，但是網站完成後成就感滿滿！</p>
                     </div>
                 </div>
                 <div class="hl"><hr style="color: rgba(242, 247, 250, 0.942);"></div>
