@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>com_A502</title>
+    <link rel="stylesheet" href="../assets/css/webstyle2.css">
+    <link rel="stylesheet" href="../assets/css/aside.css">
+    <script type = "text/javascript" src="../assets/js/cart.js"></script>
+    <script src="../assets/js/Carousel.js"></script>
+    <script src="../assets/js/add_cart.js"></script>
+
+    <script>
+        function toggleSearch() {
+        var searchBar = document.getElementById("searchBar");
+        if (searchBar.style.display === "none") {
+            searchBar.style.display = "flex";
+        } else {
+            searchBar.style.display = "none";
+        }
+        }
+        
+    </script>
+
+</head>
+<body>
+    <div class = "container">
+        <header>
+            <nav>
+                <div class="left">
+                    <a href="../index.html">記・敘</a>
+                </div>
+                <div class="right">
+                    <div id="searchBar" class="wrap" style="display: none;">
+                        <div class="search"><input type="text" class="search-bar"></div>
+                    </div>
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <img src="../assets/image/icon/search.png" alt="搜索">
+                    </button>
+                    <a href="about_us.html">關於我們</a>
+                    <a href="log_in.html">註冊/登入</a>
+                    <a href="user.html"><img src="../assets/image/icon/user.png" alt="會員中心"></a>
+                    <button class="cart-button" onclick="goCart()"><i class="clCart"></i><img src="../assets/image/icon/cart.png" alt="購物車"></button>
+                </div>
+            </nav> 
+        </header>        
+        <main>
+            <div class="main-content">
+                <!--動態廣告--->
+                <div class = "adv">
+                    <div class = "slide fade">
+                        <img src="../assets/image/book/OTHER/4.png" alt="">
+                    </div >
+                    <div class = "slide fade">
+                        <img src="../assets/image/book/OTHER/4-4.png" alt="">
+                    </div>
+                    <a class = "prev" onclick = "changeSlide(-1)">&#10094;</a>
+                    <a class = "next" onclick = "changeSlide(1)">&#10095;</a>
+                </div>              
+                <div>
+                    <span class="dot" onclick = "showSlides(1)"></span>
+                    <span class="dot" onclick = "showSlides(2)"></span>
+                </div>
+
+                <div class="txt">
+                    <h2>記．敘 宅在家筆記本 $180</h2><br>
+                    <p><b>規格:</b> <textarea name="format" cols="15" rows="1" style="text-align:center;border:2px solid cadetblue;border-radius:5px; font-size: 16px;">宅在家</textarea></p><br>
+                    <p><b>數量:</b> <input type="number" name="quantity" min="1" value="1" style="border:2px solid cadetblue;border-radius:5px;width:15%;text-align:center;font-size:16px;"></p><br>
+                    <p><input type="button" value="加入購物車" class="button1" style="font-size: 16px;"><a href="pay.html"><input type="submit" value="直接購買" class="button2" style="font-size: 16px;"></a></p>
+                </div>
+            </div>
+
+            <!--評論區-->
+            <div class="comment">
+                <p><span><input type="text" name="comment" value="留下評論吧..." style="border:2px solid cadetblue;border-radius: 5px;font-size:16px;margin-left: 5px;padding:5px;"></span></p><br>
+                <div class="com-frame">
+                    <p><div style="color:black;">北極野人</div><span class="comment1"> ★★★★★</span></p><br>
+                    <p><span class="comment2">超讚！</span></p><br>
+                </div>
+                <div class="com-frame">
+                    <p><div style="color:black;">南極企鵝</div><span class="comment1"> ★★★★★</span></p><br>
+                    <p><span class="comment2">很棒！</span></p><br>
+                </div>
+            </div>
+            
+            <!--購物車--->
+            <div class="cart-menu" id="cart-menu">
+                <form action="">
+                    <table>
+                        <tr>
+                            <td colspan="2"><h3 style="text-align: center;">購物車內容</h3></td>
+                        </tr>
+                        <tr class="good1">
+                            <button class="close-button" onclick="out()">×</button>
+                            <td><img src="../assets/image/book/NOTE/NOTE 4-1.png" alt=""></td>
+                            <td>超文青 <br> NT$300 <br>
+                            <div class="addmin">
+                                <input type="button" value="-" class="but" onclick="minus(0)">
+                                <input id="qty0" style="width: 10px;" type="text" value="1" class="qua">
+                                <input type="button" value="+" class="but" onclick="add(0)">
+                            </div>
+                            </td>
+                        </tr>
+                        <tr class="good2">
+                            <td><img src="../assets/image/book/HB/HB 2-1.png" alt=""></td>
+                            <td>超可愛 <br>  NT$450 <br>
+                            <div class="addmin">
+                                <input type="button" value="-" class="but" onclick="minus(1)">
+                                <input id="qty1" style="width: 10px;" type="text" value="1" class="qua">
+                                <input type="button" value="+" class="but" onclick="add(1)">
+                            </div>
+                        </tr>
+                    </table>
+                    <hr>
+                    <div class="total">
+                        <p>金額： <span id="total-price">NT$750</span></p>
+                        <div class="pay"><a href="pay.html">前往結帳</a></div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    <aside>
+        <h3>CATEGORIES</h3>
+        <div class="side">
+            <p>用途</p>
+            <dl>
+                <dt><a href="">日計畫</a></dt>
+                <dt><a href="">週計畫</a></dt>
+                <dt><a href="">月計畫</a></dt>
+                <dt><a href="">手帳本</a></dt>
+                <dt><a href="">記帳本</a></dt>
+                <dt><a href="">筆記本</a></dt>
+            </dl>
+            <p>大小</p>
+            <dl>
+                <dt><a href="../pages/size_A4.html">A4</a></dt>
+                <dt><a href="../pages/size_B5.html">B5</a></dt>
+                <dt><a href="../pages/size_A5.html">A5</a></dt>
+            </dl>
+            <p>內頁</p>
+            <dl>
+                <dt><a href="../pages/inside_lattice.html">點陣</a></dt>
+                <dt><a href="../pages/inside_grid.html">網格</a></dt>
+                <dt><a href="../pages/inside_line.html">橫線</a></dt>
+                <dt><a href="../pages/inside_blank.html">空白頁</a></dt>
+            </dl>
+        </div>
+        </aside>
+        <footer>
+            <div class="content">
+                <p>聯絡資訊：</p>
+                <div class="icon">
+                    <a href="mailto:cyimsa@yahoo.com.tw"><img src="../assets/image/icon/email2-.png" alt=""></a>
+                    <a href="https://www.facebook.com/cyimsa/?locale=zh_TW" target="_blank"><img src="../assets/image/icon/fb1.png" alt=""></a>
+                    <a href="tel:(03 )2655401 "><img src="../assets/image/icon/phone2.png" alt=""></a>
+                </div>
+            </div>
+            <p>copyright@2024</p>
+        </footer>
+    </div>
+</body>
+</html>
+</body>
+</html>

@@ -93,14 +93,14 @@ nav a {
     width: auto; 
     margin: 10px;
 }
-/*搜尋欄*/
 
+/*搜尋欄*/
 .wrap {
     max-width: 200px;
-    height: 40px; /* 设置与按钮相同的高度 */
-    display: flex; /* 使用 Flexbox 布局 */
-    justify-content: space-between; /* 使搜索栏与两侧元素保持相等的间距 */
-    align-items: center; /* 垂直居中 */
+    height: 40px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .search-bar {
@@ -108,7 +108,7 @@ nav a {
     height: 32px;
     font-size: 20px;
     background-color:#f1f0e9;
-    padding-right: 36px; /* 给按钮留出空间 */
+    padding-right: 36px; 
 }
 
 .search-btn {
@@ -118,9 +118,9 @@ nav a {
     height: 40px;
     outline: none;
     cursor: pointer;
-    display: flex; /* 使用 Flexbox 布局 */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
     top: 0;
     right: 0;
     border: none;
