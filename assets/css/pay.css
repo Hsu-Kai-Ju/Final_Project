@@ -1,0 +1,27 @@
+<script>
+    function updateTotal() {
+        const prices = document.querySelectorAll('.price');
+        let subtotal = 0;
+        prices.forEach((price, index) => {
+            const quantity = document.getElementById('qty' + index).value;
+            subtotal += parseInt(price.textContent) * parseInt(quantity);
+        });
+        document.getElementById('subtotal').textContent = subtotal;
+        const shipping = parseInt(document.getElementById('shipping').textContent);
+        document.getElementById('total').textContent = subtotal + shipping;
+    }
+
+    function add(index) {
+        const quantityInput = document.getElementById('qty' + index);
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+        updateTotal();
+    }
+
+    function minus(index) {
+        const quantityInput = document.getElementById('qty' + index);
+        if (parseInt(quantityInput.value) > 1) {
+            quantityInput.value = parseInt(quantityInput.value) - 1;
+            updateTotal();
+        }
+    }
+</script>

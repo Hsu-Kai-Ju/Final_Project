@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../assets/css/webstyle.css">
     <link rel="stylesheet" href="../assets/css/aside.css">
     <script type = "text/javascript" src="../assets/js/cart.js"></script>  
+    <script type = "text/javascript" src="../assets/js/pay.js"></script>  
+
 
     <script>
         function toggleSearch() {
@@ -16,7 +18,7 @@
         } else {
             searchBar.style.display = "none";
         }
-    }
+        }
     </script>
 
     <style>
@@ -86,8 +88,6 @@
             color: antiquewhite;
         }
 
-
-
     </style>
     
 </head>
@@ -154,23 +154,35 @@
                     <tr>
                         <td><a href=""><img src="../assets/image/book/NOTE/NOTE 4-1.png" alt=""></a></td>
                         <td>超文青</td>
-                        <td>NT$300</td>
-                        <td>1</td>
+                        <td>NT$<span class="price">300</span></td>
+                        <td>
+                            <div class="addmin" style="width: 65px; margin: auto;">
+                                <input type="button" value="-" class="but" onclick="minus(0)">
+                                <input id="qua0" style="width: 10px;" type="text" value="1" class="qq" readonly>
+                                <input type="button" value="+" class="but" onclick="add(0)">
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td><a href=""><img src="../assets/image/book/HB/HB 2-1.png" alt=""></a></td>
                         <td>超可愛</td>
-                        <td>NT$450</td>
-                        <td>1</td>
+                        <td>NT$<span class="price">450</span></td>
+                        <td>
+                            <div class="addmin" style="width: 65px; margin: auto;">
+                                <input type="button" value="-" class="but" onclick="minus(1)">
+                                <input id="qua1" style="width: 10px;" type="text" value="1" class="qq" readonly>
+                                <input type="button" value="+" class="but" onclick="add(1)">
+                            </div>
+                        </td>
                     </tr>
                     <tr>
-                        <td colspan="4"><div class="order-left">金額：NT$750</div></td>
+                        <td colspan="4"><div class="order-left">金額：NT$<span id="sub-price">750</span></div></td>
                     </tr>
                     <tr>
                         <td colspan="4"><div class="order-left">運費：NT$60</div></td>
                     </tr>
                     <tr>
-                        <td colspan="4"><div class="order-left">總計：NT$810</div></td>
+                        <td colspan="4"><div class="order-left">總計：NT$<span id="total">810</span></div></td>
                     </tr>
                 </table>
             </div>
