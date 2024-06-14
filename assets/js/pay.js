@@ -22,12 +22,11 @@ function updateTotal() {
         subtotal += parseInt(quantity.value) * prices[index];
     });
     
-    var shipping = 60; // Assuming a fixed shipping cost
+    var shipping = 60; 
     var total = subtotal + shipping;
     
     document.getElementById('sub-price').innerText = subtotal;
     document.getElementById('total').innerText = total;
 }
 
-// Initial call to set the correct total on page load
 updateTotal();
